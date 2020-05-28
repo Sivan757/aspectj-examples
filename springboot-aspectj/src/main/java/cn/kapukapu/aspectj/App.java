@@ -15,8 +15,13 @@ import org.springframework.scheduling.annotation.EnableAsync;
 public class App {
 
     @Async
-    public void run() {
-        System.out.printf("app run in thread[%d]%n", Thread.currentThread().getId());
+    public void runA() {
+        runB(Thread.currentThread().getId());
+    }
+
+    @Async
+    public void runB(long threadId) {
+        System.out.printf("runA in thread[%d], runB in thread[%d]%n", threadId, Thread.currentThread().getId());
     }
 
     public static void main(String[] args) {
@@ -25,7 +30,7 @@ public class App {
 
         int i = 5;
         while (i > 0) {
-            app.run();
+            app.runA();
             i--;
         }
 
