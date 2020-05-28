@@ -27,24 +27,24 @@
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjtools</artifactId>
-                        <version>${aspectj.version}</version>
+                        <version>${aspectj.version}</version> <!-- upgrade dependent versions in plugin -->
                     </dependency>
                 </dependencies>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>compile</goal>
+                            <goal>compile</goal> <!-- aspectj:compile. it is executed by default in the Maven:compile phase. -->
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <source>${maven.compiler.source}</source> <!-- source code version -->
+                    <target>${maven.compiler.target}</target> <!-- classfile version -->
                     <encoding>${project.build.sourceEncoding}</encoding>
-                    <complianceLevel>${maven.compiler.target}</complianceLevel>
-                    <Xlint>ignore</Xlint>
+                    <complianceLevel>1.3</complianceLevel>
+                    <Xlint>ignore</Xlint>  <!-- ignore Xlint output, hide ugly red prompts in the console -->
                     <showWeaveInfo>true</showWeaveInfo>
-                    <forceAjcCompile>true</forceAjcCompile>
+                    <forceAjcCompile>true</forceAjcCompile>  <!-- mandatory use of ajc compiler -->
                 </configuration>
             </plugin>
         </plugins>
