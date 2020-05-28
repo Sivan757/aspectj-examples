@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <aspectj>
     <weaver options="-showweaveInfo -Xlint:ignore">
+        <!-- specify weave path -->
         <include within="cn.kapukapu.aspectj.**"/>
     </weaver>
 </aspectj>
