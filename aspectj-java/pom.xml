@@ -45,7 +45,7 @@
                     <Xlint>ignore</Xlint>
                     <showWeaveInfo>true</showWeaveInfo>
                     <forceAjcCompile>true</forceAjcCompile>
-                    <aspectDirectory>src/main/java</aspectDirectory> <!-- java aspect config location -->
+                    <aspectDirectory>src/main/java</aspectDirectory> <!-- source path of the aspect -->
                 </configuration>
             </plugin>
         </plugins>
