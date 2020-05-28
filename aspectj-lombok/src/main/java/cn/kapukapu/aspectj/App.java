@@ -3,7 +3,6 @@ package cn.kapukapu.aspectj;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author sivan

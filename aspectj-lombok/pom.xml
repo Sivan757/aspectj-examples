@@ -53,7 +53,7 @@
                     <forceAjcCompile>true</forceAjcCompile>
                     <aspectDirectory>src/main/java</aspectDirectory>
                     <weaveDirectories>   <!-- change weave directory  -->
-                        <weaveDirectory>${project.build.directory}/classes</weaveDirectory>
+                        <weaveDirectory>${project.build.outputDirectory}</weaveDirectory>
                     </weaveDirectories>
                     <sources/> <!-- Don't compile the source code folder -->
                 </configuration>
