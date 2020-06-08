@@ -33,7 +33,7 @@
     </dependencies>
     <executions>
         <execution>
-            <phase>process-classes</phase>  <!-- change compile phase  -->
+            <phase>process-classes</phase>  <!--  修改插件执行阶段  -->
             <goals>
                 <goal>compile</goal>
             </goals>
@@ -48,10 +48,10 @@
         <showWeaveInfo>true</showWeaveInfo>
         <forceAjcCompile>true</forceAjcCompile>
         <aspectDirectory>src/main/java</aspectDirectory>
-        <weaveDirectories>   <!-- change weave directory  -->
+        <weaveDirectories>   <!-- 修改编织目录为编译后文件夹  -->
             <weaveDirectory>${project.build.directory}/classes</weaveDirectory>
         </weaveDirectories>
-        <sources/> <!-- Don't compile the source code folder -->
+        <sources/> <!-- 不编译源代码文件夹 -->
     </configuration>
 </plugin>
 ```
