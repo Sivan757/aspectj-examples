@@ -11,6 +11,11 @@
     <groupId>org.aspectj</groupId>
     <artifactId>aspectjrt</artifactId>
 </dependency>
+
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+</dependency>
 ```
 
 ### Plugin
