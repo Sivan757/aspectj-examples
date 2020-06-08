@@ -1,6 +1,6 @@
 # aspectj-examples
 
-在网上看了很多文章，大多是介绍 AspectJ 语法（.aj、annotation）、Spring Aop 和 AspectJ 的关系。因此在这里做一次分享～
+在网上看了很多文章，大多是介绍 AspectJ 语法（使用.aj、Annotation编写切面）、Spring Aop 与 AspectJ 的关系，但却很少有在SpringBoot中使用的例子，因此做一次使用起来的分享～
 
 ## AspectJ 是什么
 
@@ -37,16 +37,16 @@ aspectj-examples
 
 ```
 
-各模块相互独立，父pom.xml仅定义依赖版本；各模块拥有说明文档提供简短说明、依赖、运行、输出等信息; 按模块顺序，模块中相同的说明信息不会重复出现。
+各模块相互独立，父pom.xml仅定义依赖版本；各模块拥有说明文档提供简短说明、依赖、运行、输出等信息；*按模块顺序，模块中相同的说明信息不会重复出现。*
 
 > NOTE:
 >
-> 1. 除LTW（Load Time Weaving）外，其余模块都需要使用AJC编译器 (aspectj-maven-plugin 默认引入)。
+> 1. 除LTW（Load Time Weaving）外，其余模块都需要使用AJC编译器 (aspectj-maven-plugin 默认提供)。
 >
 > 2. lombok 模块，需要在'IDE'中设置'Post-compile weave'
 >    - IDEA: 'Project Structure' -> 'Facets' -> 'xx-lombok-module' -> 'Compiler' -> 'Post-compile weave mode'
 >    - Eclipse: [EJDT](https://www.eclipse.org/ajdt/)
-> 3. 尝试在LTW中使用'.aj'文件，暂无解决方案。
+> 3. 尝试在LTW中使用'.aj'文件，但无法解析，暂无解决方案。
 
 
 ## 参考
