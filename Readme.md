@@ -27,13 +27,14 @@ AspectJ 是一个 AOP 的具体实现框架。AOP（Aspect Oriented Programming�
 ```txt
 aspectj-examples
 ├── aspectj                         # LTW 相关Jar
-├── aspectj-aj                      # Aspect.aj CTW示例
-├── aspectj-java                    # Aspect.java CTW示例
-├── aspectj-lombok                  # Aspect + Lombok PCTW示例
-├── aspectj-lombok-ltw              # Aspect + Lombok LTW示例
-├── springboot-aspectj              # SpringBoot + Aspect 示例
-├── springboot-aspectj-lombok       # SpringBoot + Aspect + Lombok PCTW示例
-└── springboot-aspectj-lombok-ltw   # SpringBoot + Aspect + Lombok LTW示例
+├── aspectj-aj                      # AspectJ.aj CTW示例
+├── aspectj-java                    # AspectJ.java CTW示例
+├── aspectj-lombok                  # AspectJ + Lombok PCTW示例
+├── aspectj-lombok-ltw              # AspectJ + Lombok LTW示例
+├── springboot-aspectj              # SpringBoot + AspectJ 示例
+├── springboot-aspectj-autowired    # SpringBoot + AspectJ + @Autowired 示例
+├── springboot-aspectj-lombok       # SpringBoot + AspectJ + Lombok PCTW示例
+└── springboot-aspectj-lombok-ltw   # SpringBoot + AspectJ + Lombok LTW示例
 
 ```
 
@@ -44,10 +45,12 @@ aspectj-examples
 > 1. 除LTW（Load Time Weaving）外，其余模块都需要使用AJC编译器 (aspectj-maven-plugin 默认提供)。
 >
 > 2. lombok 模块，需要在'IDE'中设置'Post-compile weave'
->    - IDEA: 'Project Structure' -> 'Facets' -> 'xx-lombok-module' -> 'Compiler' -> 'Post-compile weave mode'
+>    - IDEA: 'Project Structure' -> 'Facets' -> 'your-lombok-module' -> 'Compiler' -> 'Post-compile weave mode'
 >    - Eclipse: [EJDT](https://www.eclipse.org/ajdt/)
 > 3. 尝试在LTW中使用'.aj'文件，但无法解析，暂无解决方案。
 
+## 更新注记
+- '2020-11-26': 发现 SpringBoot 使用 AspectJ 后，无法对切面（@Aspect）对象进行自动注入，添加一个关于注入切面类的模块。
 
 ## 参考
 
