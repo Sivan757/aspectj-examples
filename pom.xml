@@ -18,6 +18,7 @@
         <module>springboot-aspectj</module>
         <module>springboot-aspectj-lombok</module>
         <module>springboot-aspectj-lombok-ltw</module>
+        <module>springboot-aspectj-autowired</module>
     </modules>
 
     <properties>
